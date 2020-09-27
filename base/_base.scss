@@ -1,0 +1,81 @@
+*,
+*::before,
+**::after{
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  box-sizing: inherit;
+}
+
+button{
+  :focus{
+  cursor: pointer;
+  outline: none;
+  }
+}
+
+.logo{
+  content:""
+}
+
+link{
+  text-decoration: none;
+  transform: translate 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+address{
+  font-style: normal;
+}
+
+img{
+  display: block;
+  border: 1px solid transparent;
+}
+
+ul, 
+.list, h1, h2, h3, h4{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+.flex{
+  display: flex;
+  align-items: center;
+
+}
+
+.nav:visited{
+  color: $title-color;
+}
+body{
+  font-family: Roboto;
+  font-style: 400;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+}
+
+.nav:visited{
+  color: $title-color;
+}
+
+// ИКОНКИ ЛОГОТИПА
+.icon-WebStudio,
+.icon-Web-Studio-footer{
+  width: 145px;
+  height: 31px;
+  margin-right: 93px;
+}
+
+textarea{
+  resize: none;
+}
