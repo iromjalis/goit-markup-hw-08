@@ -455,13 +455,6 @@ body {
   color: #212121;
 }
 
-.icon-WebStudio,
-.icon-Web-Studio-footer {
-  width: 145px;
-  height: 31px;
-  margin-right: 93px;
-}
-
 textarea {
   resize: none;
 }
@@ -492,34 +485,76 @@ textarea {
   }
 }
 
-header .flex.container, .features.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-/* === HEADER ===*/
 header {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-header .flex.container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+header .container, .menu-btn, .features.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*   align-items: center;
+ */
+}
+
+/* === HEADER ===*/
+header .container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
   height: 80px;
+  outline: 1px solid red;
+  background-color: green;
+  width: 480px;
 }
 
-header .flex.container.portfolio {
+@media screen and (max-width: 767px) {
+  header .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  header .container {
+    width: 1170px;
+  }
+}
+
+header .container.portfolio {
   border-bottom: 1px solid #ECECEC;
+}
+
+.menu {
+  outline: 1px solid red;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin-left: 206px;
+}
+
+.menu-btn {
+  margin: 12px 8px;
+}
+
+/* СКРЫТЬ НАВИГАЦИЮ И КОНТАКТЫ В МОБИЛКЕ*/
+@media screen and (max-width: 767px) {
+  .nav-list, address {
+    display: none;
+  }
 }
 
 .nav-list-item:not(:last-child),
@@ -1317,6 +1352,12 @@ textarea:hove, .checkbox:checked, .checkbox:focus {
   padding-top: 60px;
   padding-bottom: 60px;
   font-style: normal;
+}
+
+.icon-Web-Studio-footer {
+  width: 145px;
+  height: 31px;
+  margin-right: 93px;
 }
 
 .footer-logo {

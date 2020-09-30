@@ -10,17 +10,32 @@
 
 </head>
 <body>
-    <header class="header flex">
-        <div class="flex container">
+    <header class="header">
+        <div class="container">
                     <!--Логотип header-->
+                <nav class="flex nav">
+                    <a href="./index.html" >
+                        <svg class="icon-WebStudio" width="134" height="28">
+                            <use href="./images/SVG/symbol-defs.svg#icon-WebStudio"></use>
+                        </svg>
+                    </a>
 
-            <nav class="flex nav">
-                <a href="./index.html" class="icon-WebStudio">
-                    <svg class="icon-WebStudio" width="145" height="31">
-                        <use href="./images/SVG/symbol-defs.svg#icon-WebStudio"></use>
+                    <!--Кнопка навигации на мобилке--->
+                    
+                <button type="button" class="menu is-open" width="40" height="40">
+                    <svg width="24" height="16" class="menu-btn"
+                        aria-label="Переключатель мобильного меню"
+                        aria-expanded="false"
+                        aria-controls="menu-container">
+                        <use  href="./images/SVG/symbol-defs.svg#icon-menu"></use>
+                        <use href="./images/SVG/symbol-defs.svg#icon-close-black"></use>
                     </svg>
-                </a>
+                </button>
+             
 
+            
+        
+            </div>
                 <ul class="nav-list flex">
                     <li class="nav-list-item"><a href="./index.html" class="link current">
                         Студия</a></li>
@@ -30,7 +45,7 @@
             </nav>
         
             <!--Контакты-->
-            <address class="">
+            <address >
                 <ul class="contact-list">
                     <li class=""> 
                         <a href="mailto:info@devstudio.com" class="contacts ">

@@ -3,11 +3,12 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  display: flex;
 }
 %flex{
   display: flex;
-  align-items: center;
-}
+/*   align-items: center;
+ */}
 
 %link{
   padding: 25px 0;
@@ -24,27 +25,63 @@
   cursor: pointer;
 }
 }
+
+
 /* === HEADER ===*/
 
 header{
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @extend %header;
 }
 
-header .flex.container{
+header .container{
   @extend %flex;
-  align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
   height: 80px;
+  outline: 1px solid red;
+  background-color: green;
+  width: 480px;
+
+  @media screen and (max-width: 767px){
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px){
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1170px){
+    width: 1170px;
+  }
   &.portfolio{
     border-bottom: 1px solid #ECECEC;
   }
-
 }
 
+//button
+.menu{
+  outline: 1px solid red;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+margin-left: 206px;
+}
+
+//svg
+.menu-btn{
+  @extend %flex;
+  margin: 12px 8px;
+}
+
+
+/* СКРЫТЬ НАВИГАЦИЮ И КОНТАКТЫ В МОБИЛКЕ*/
+.nav-list, address{
+  @media screen and (max-width: 767px){
+    display: none;
+  }
+}
 .nav-list-item:not(:last-child),
 .contacts.contacts:not(:last-child){
   display: flex;
