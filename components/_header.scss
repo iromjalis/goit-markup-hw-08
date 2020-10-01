@@ -7,8 +7,7 @@
 }
 %flex{
   display: flex;
-/*   align-items: center;
- */}
+}
 
 %link{
   padding: 25px 0;
@@ -26,10 +25,15 @@
 }
 }
 
-
 /* === HEADER ===*/
+.header_container{
+  background-color: violet;
+}
 
 header{
+  border: 1ps solid red;
+}
+/* header{
   @extend %header;
 }
 
@@ -57,27 +61,27 @@ header .container{
   &.portfolio{
     border-bottom: 1px solid #ECECEC;
   }
-}
+} */
 
 //button
-.menu{
+/* .menu{
   outline: 1px solid red;
   border: none;
   background-color: transparent;
   padding: 0;
 
 margin-left: 206px;
-}
+} */
 
 //svg
-.menu-btn{
+/* .menu-btn{
   @extend %flex;
   margin: 12px 8px;
-}
+} */
 
 
 /* СКРЫТЬ НАВИГАЦИЮ И КОНТАКТЫ В МОБИЛКЕ*/
-.nav-list, address{
+/* .nav-list, address{
   @media screen and (max-width: 767px){
     display: none;
   }
@@ -86,9 +90,9 @@ margin-left: 206px;
 .contacts.contacts:not(:last-child){
   display: flex;
   padding-right: 50px;
-}
+} */
 
-.link{
+/* .link{
   padding: 25px 0;
   position: relative;
 
@@ -102,9 +106,9 @@ margin-left: 206px;
   color: $accent-color;
   cursor: pointer;
 }
-}
+} */
 
-.link.current::after{
+/* .link.current::after{
   display: block;
   content: "";
   margin-top: 28px;
@@ -113,9 +117,9 @@ margin-left: 206px;
   background-color:$accent-color;
   border-radius: 4px;
   position: absolute;
-}
+} */
 
-.contacts{
+/* .contacts{
   color: $text-color;
   transition-property: color, fill;
   transition-duration: 250ms;
@@ -139,22 +143,22 @@ margin-left: 206px;
     display: inline-flex;
     align-items: center;
 }
-}
+} */
 
-.header .address{
+/* .header .address{
   display: flex;
     margin-left:  auto;   
     align-items: center;
-}
+} */
 
 /*.icon-envelope и .icon-tel сделать вместе*/
-.contacts-icon{
+/* .contacts-icon{
   display: block;
   background-color: $header-bg;
   margin-right: 10px;
   align-items: center;
   fill: $text-color;
-}
+} */
 
 
 /* === END HEADER ===*/
