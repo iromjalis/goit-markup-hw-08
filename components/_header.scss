@@ -25,69 +25,89 @@
 }
 }
 
-/* === HEADER ===*/
-.header_container{
-  background-color: violet;
-}
-
-header{
-  border: 1ps solid red;
-}
-/* header{
-  @extend %header;
-}
-
-header .container{
-  @extend %flex;
-  justify-content: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  height: 80px;
+.container{
+  display: inline-block;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
   outline: 1px solid red;
-  background-color: green;
-  width: 480px;
 
-  @media screen and (max-width: 767px){
-    width: 480px;
+  @media screen and (min-width: 480px){
+    &{
+      width: 480px;
+    }
   }
-
   @media screen and (min-width: 768px){
-    width: 768px;
+    &{
+      width: 768px;
+    }
   }
-
-  @media screen and (min-width: 1170px){
-    width: 1170px;
-  }
-  &.portfolio{
-    border-bottom: 1px solid #ECECEC;
-  }
-} */
-
-//button
-/* .menu{
-  outline: 1px solid red;
-  border: none;
-  background-color: transparent;
-  padding: 0;
-
-margin-left: 206px;
-} */
-
-//svg
-/* .menu-btn{
-  @extend %flex;
-  margin: 12px 8px;
-} */
-
-
-/* СКРЫТЬ НАВИГАЦИЮ И КОНТАКТЫ В МОБИЛКЕ*/
-/* .nav-list, address{
-  @media screen and (max-width: 767px){
-    display: none;
+  @media screen and (min-width: 1200px){
+    &{
+      width: 1200px;
+    }
   }
 }
-.nav-list-item:not(:last-child),
-.contacts.contacts:not(:last-child){
+
+/* === HEADER ===*/
+.header{
+  @extend %header;
+  display: flex;
+  justify-content: space-between;
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+%header__logo{
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.6667;
+  letter-spacing: 0.03em;
+  color: $title-color;
+}
+.header__logo{
+  @extend %header__logo;
+
+  &-accent{
+    @extend %header__logo;
+    color: $accent-color;
+  }
+}
+
+%header{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.header__menu{
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid red;
+  background-color: transparent;
+}
+/* header .flex.container{
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  height: 80px;
+} */
+
+/* .icon-WebStudio,
+.icon-Web-Studio-footer{
+  width: 145px;
+  height: 31px;
+  margin-right: 93px;
+} */
+
+/* .nav-list-item:not(:last-child),
+.address .contacts:not(:last-child){
   display: flex;
   padding-right: 50px;
 } */
@@ -99,13 +119,22 @@ margin-left: 206px;
   transition-property: color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  color: $title-color;
+} */
+/* .link,
+.nav:visited{
+  color: var(--title-color);
+} */
 
-  &:hover, &:focus{
-  fill: $accent-color;
-  color: $accent-color;
+/* .link:hover,
+.link:focus,
+.current,
+.contacts:hover svg,
+.contacts:focus svg,
+.contacts:hover,
+.contacts:focus{
+  fill: var(--accent-color);
+  color: var(--accent-color);
   cursor: pointer;
-}
 } */
 
 /* .link.current::after{
@@ -114,51 +143,43 @@ margin-left: 206px;
   margin-top: 28px;
   width: 100%;
   height: 4px;
-  background-color:$accent-color;
+  background-color:var(--accent-color);
   border-radius: 4px;
   position: absolute;
 } */
 
 /* .contacts{
-  color: $text-color;
+  color:var(--text-color);
   transition-property: color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   padding: 25px 0;
-
-  &:hover,
-  &:focus{
-  color: $accent-color;
-  cursor: pointer;
-    svg{
-    fill: $accent-color;
-    color: $accent-color;
-    cursor: pointer;
-    transition-property: color, fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}
-  .header .address &{
-    display: inline-flex;
-    align-items: center;
-}
 } */
 
 /* .header .address{
-  display: flex;
-    margin-left:  auto;   
-    align-items: center;
+  display: inline-flex;
+  margin-left: auto;
+  align-items: center;
 } */
 
-/*.icon-envelope и .icon-tel сделать вместе*/
-/* .contacts-icon{
+/* .header .address .contacts{
+  display: inline-flex;
+  align-items: center;
+} */
+/* .icon-envelope{
   display: block;
-  background-color: $header-bg;
+  background-color: var(--header-bg);
   margin-right: 10px;
   align-items: center;
-  fill: $text-color;
+  fill: var(--text-color);
 } */
 
+/* .icon-tel{
+  display: block;
+  background-color: var(--header-bg);
+  margin-right: 10px;
+  align-items: center;
+  fill: var(--text-color);
+} */
 
 /* === END HEADER ===*/
