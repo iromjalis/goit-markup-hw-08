@@ -15,64 +15,58 @@
         <div class="container">
             <nav class="header__nav">
                     <!--Логотип header-->
-                <a href="/"><span class="header__logo-accent">Web</span><span class="header__logo">Studio</span></a>
+                <a href="/" class="logo"><span class="header__logo-accent">Web</span><span class="header__logo">Studio</span></a>
 
-            <!--Кнопка навигации на мобилке--->
-                    
-            <button type="button" class="header__menu is-open" width="40" height="40">
-                <svg width="24" height="16" 
-                    aria-label="Переключатель мобильного меню"
-                    aria-expanded="false"
-                    aria-controls="menu-container">
-                    <use data-modal-open href="./images/SVG/symbol-defs.svg#icon-menu"></use>
-                    <use data-modal-close href="./images/SVG/symbol-defs.svg#icon-close-black"></use>
-                </svg>
-            </button>
-            </nav>  
+            <!--Кнопка навигации на мобилке--->    
+                <button type="button" class="menu-btn " width="40" height="40" data-menu-button>
+                    <svg width="24" height="18" 
+                        aria-label="Переключатель мобильного меню"
+                        aria-expanded="false"
+                        aria-controls="menu-container">
+                        <use class="icon-menu" data-modal-open href="./images/SVG/symbol-defs.svg#icon-menu" ></use>
+                        <use class="icon-cross" data-modal-close href="./images/SVG/symbol-defs.svg#icon-close-black" ></use>
+                    </svg>
+                </button>
 
-            <button data-modal-open>Open</button>
-            <div class="backdrop is-hidden" data-modal >
-                <div class="modal">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, quibusdam!</p>
-                    <button data-modal-close>Close</button>
-                </div>
-            </div>
-        
-        <div data-modal>
-            <nav class="" >
-                <ul class="">
-                    <li class=""><a href="./index.html" class="">
+            <div class="navigation ">
+                <ul class="nav-list ">
+                    <li class="nav-list-item"><a href="./index.html" class="link current">
                         Студия</a></li>
-                    <li class=""><a href="./portfolio.html" class="">Портфолио</a></li>
-                    <li class=""><a href="" class="">Контакты</a></li>
+                    <li class="nav-list-item"><a href="./portfolio.html" class="link">Портфолио</a></li>
+                    <li class="nav-list-item"><a href="" class="link">Контакты</a></li>
                 </ul>
-            </nav>
-        
             <!--Контакты-->
-            <address class="">
-                <ul class="">
-                    <li class=""> 
-                        <a href="mailto:info@devstudio.com" class="">
-                        <svg class="" width="16" height="12">
-                            <use href="./images/SVG/symbol-defs.svg#icon-envelope"></use>
-                        </svg>               
-                         <span>info@devstudio.com</span>
-                        </a>
-                    </li>
-                    <li class="">    
-                        <a href="tel:+380961111111" class="contacts ">      
-                        <svg class="" width="10" height="16">
-                            <use href="./images/SVG/symbol-defs.svg#icon-tel"></use>
-                        </svg>   
-                         <span>+38 096 111 11 11</span> </a>
-                    </li>
-                </ul>
-            </address>
+                <address >
+                    <ul class="address-list">
+                        <li class="address-item"> 
+                            <a href="mailto:info@devstudio.com" class="contacts ">
+                            <svg class="contacts-icon" width="16" height="12">
+                                <use href="./images/SVG/symbol-defs.svg#icon-envelope"></use>
+                            </svg>               
+                            <span>info@devstudio.com</span>
+                            </a>
+                        </li>
+                        <li class="address-item">    
+                            <a href="tel:+380961111111" class="contacts ">      
+                            <svg class="contacts-icon" width="10" height="16">
+                                <use href="./images/SVG/symbol-defs.svg#icon-tel"></use>
+                            </svg>   
+                            <span>+38 096 111 11 11</span> </a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </nav>
+
         </div>
     </div>
     </header>
+
     
     <script src="./jc/modal.js"></script>
+
+    <script src="./jc/menu.js"></script>
+
 
 </body>
 

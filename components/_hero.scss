@@ -1,6 +1,4 @@
 /* === HERO ===*/
-
-  
   .hero-title{
     width: 696px;
     margin: auto auto;
@@ -25,7 +23,6 @@
     min-width: 1600px;
     height: 600px;
     object-fit: fill;
-    background-image: linear-gradient(to right, $gradient-hero, $gradient-hero ), url(../images/hero.jpg);
     background-color: $hero-bg;
     background-repeat: repeat;
     text-align: center;
@@ -57,5 +54,20 @@
   }
   
   /* === END HERO ===*/
-  
-  
+  @media screen and (min-width:480px){
+    .container{
+      width: 480px;
+    }
+  }
+
+  @media screen and (max-width:767px){
+    
+  }
+
+  @media screen and (min-width:768px) and(max-width: 1199px){
+    
+  }
+
+  @media screen and (min-width: 1200px){
+    
+  }
