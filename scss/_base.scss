@@ -1,0 +1,19 @@
+.header {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 1px solid pink;
+
+    @media (min-width: 480px) {
+      width: 480px;
+    }
+    @media (min-width: width 768px) {
+      width: 768px;
+    }
+  }
+  &-nav {
+    display: flex;
+  }
+}
