@@ -1,7 +1,19 @@
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid pink;
+}
+
 * {
   list-style-type: none;
   text-decoration: none;
   padding-inline-start: 0;
+}
+
+img{
+  display: block;
 }
 
 .header {
@@ -9,7 +21,10 @@
     text-decoration: none;
     list-style: none;
   }
-}
+  .container{
+    height: 60px;
+  }
+
 .container {
   position: relative;
   padding-left: 15px;
@@ -20,12 +35,11 @@
 
   display: flex;
   justify-content: space-between;
-  height: 60px;
   align-items: center;
   @media (min-width: 480px) {
     width: 480px;
   }
-
+}
   @media (min-width: 768px) {
     width: 768px;
   }
@@ -37,7 +51,6 @@
 
 .modal {
   position: absolute;
-  display: block;
   display: none;
   width: 100%;
   bottom: 0;
@@ -50,13 +63,86 @@
   &-link {
     display: block;
   }
+  .is-hidden{
+    display: block;
+  }
 }
 
-.button {
+.header-logo{
+  font-family: Raleway;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 28px;
+letter-spacing: 0.03em;
+
+color: #2196F3;
+
+span{
+  color:#212121;
+}
+}
+
+.close-btn {
+width: 18px;
+text-align: center;
+  @media (min-width: 768px){
+    display: none;
+  }
   outline: 1px solid red;
   display: inline-block;
   fill: #212121;
   use {
     fill: #212121;
   }
+}
+
+.hero-section{
+  height: 400px;
+  text-align: center;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-image: url(../images/hero/hero.jpg);
+    .container{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+& .container{
+  margin: 0;
+}
+}
+
+.header-title{
+  font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 26px;
+line-height: 1.62;
+text-align: center;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+}
+
+.button{
+  MIN-width: 200px;
+  height: 50px;
+  padding: 10px 32px;
+  background-color: #2196F3;
+
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 1.87;
+align-items: center;
+text-align: center;
+letter-spacing: 0.06em;
+
+color: #FFFFFF;
+background: #2196F3;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
 }

@@ -1,3 +1,11 @@
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid pink;
+}
+
 * {
   list-style-type: none;
   text-decoration: none;
@@ -5,12 +13,20 @@
           padding-inline-start: 0;
 }
 
+img {
+  display: block;
+}
+
 .header-logo {
   text-decoration: none;
   list-style: none;
 }
 
-.container {
+.header .container {
+  height: 60px;
+}
+
+.header .container {
   position: relative;
   padding-left: 15px;
   padding-right: 15px;
@@ -23,33 +39,31 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 60px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 @media (min-width: 480px) {
-  .container {
+  .header .container {
     width: 480px;
   }
 }
 
 @media (min-width: 768px) {
-  .container {
+  .header {
     width: 768px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container {
+  .header {
     width: 1200px;
   }
 }
 
 .modal {
   position: absolute;
-  display: block;
   display: none;
   width: 100%;
   bottom: 0;
@@ -65,13 +79,90 @@
   display: block;
 }
 
-.button {
+.modal .is-hidden {
+  display: block;
+}
+
+.header-logo {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #2196F3;
+}
+
+.header-logo span {
+  color: #212121;
+}
+
+.close-btn {
+  width: 18px;
+  text-align: center;
   outline: 1px solid red;
   display: inline-block;
   fill: #212121;
 }
 
-.button use {
+@media (min-width: 768px) {
+  .close-btn {
+    display: none;
+  }
+}
+
+.close-btn use {
   fill: #212121;
+}
+
+.hero-section {
+  height: 400px;
+  text-align: center;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-image: url(../images/hero/hero.jpg);
+}
+
+.hero-section .container {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.hero-section .container {
+  margin: 0;
+}
+
+.header-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.button {
+  MIN-width: 200px;
+  height: 50px;
+  padding: 10px 32px;
+  background-color: #2196F3;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  background: #2196F3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 /*# sourceMappingURL=main.css.map */
