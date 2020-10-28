@@ -9,32 +9,39 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
-    <header class="header">
+    <header class="header-section">
         <div class="container">
-            <a class="header-logo" href="./index.html">Web<span>Studio</span></a>
+            <a class="logo" href="./index.html">Web<span>Studio</span></a>
             <div class="modal" data-menu>
                 <ul class="modal-list">
                     <li class="modal-item"><a class="modal-link" href="./index.html">Студия</a></li>
                     <li class="modal-item"><a class="modal-link" href="">Портфолио</a></li>
                     <li class="modal-item"><a class="modal-link" href="">Контакты</a></li>
                 </ul>
-
             </div>
 
 
-            <div class="close-btn">X</div>
+
+            <svg class="header-menu" width="40" height="40">
+                <use class="header-menu-burger" width="24" height="16" href="./images/SVG/symbol-defs.svg#icon-menu">
+                </use>
+                <use class="header-menu-close" width="18" height="18" href="./images/SVG/symbol-defs.svg#icon-close">
+                </use>
+            </svg>
         </div>
     </header>
+
+
 
     <main>
         <div class="hero-section">
             <div class="container">
                 <h1 class="header-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="button">Заказать услугу</button>
+                <button type="button" class="button" data-modal-open>Заказать услугу</button>
             </div>
         </div>
 
@@ -320,7 +327,7 @@
         <div class="container">
 
             <ul class="address-list">
-                <a href="./index.html" class="footer-logo">Web<span class="">Studio</span></a>
+                <a href="./index.html" class="logo">Web<span class="">Studio</span></a>
 
                 <li class="address-item"><a class="address-link map"
                         href="https://www.google.com.ua/maps/place/%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80+%D0%9B%D0%B5%D1%81%D1%96+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D1%97%D0%B2,+02000"

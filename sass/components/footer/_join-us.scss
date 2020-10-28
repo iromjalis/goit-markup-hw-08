@@ -1,0 +1,22 @@
+.subscribe {
+  &-section {
+    width: 206px;
+    margin-left: 70px;
+    margin-right: 93px;
+    margin-bottom: 20px;
+    margin-top: 12px;
+  }
+
+  .footer-title {
+    width: 145px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $white-color;
+
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+}

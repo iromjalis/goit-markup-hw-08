@@ -1,0 +1,51 @@
+.nav {
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    fill: $accent-color;
+  }
+  &:visited {
+    display: block;
+    color: $title-color;
+    position: relative;
+  }
+}
+.site-nav .link {
+  position: relative;
+  @extend %link;
+  @extend %transition;
+
+  & {
+    color: $title-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    fill: $accent-color;
+  }
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &.current::after {
+    display: block;
+    content: "";
+    margin-top: 28px;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 4px;
+    position: absolute;
+  }
+}
+
+.nav .list {
+  &:first-child {
+    margin-left: 90px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}

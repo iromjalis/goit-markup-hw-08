@@ -1,0 +1,8 @@
+.logo-header {
+  @extend %logo;
+  color: $accent-color;
+
+  span {
+    color: $title-color;
+  }
+}

@@ -1,0 +1,62 @@
+/* !=== FEATURES===*/
+.features {
+  &-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &-item {
+    width: 270px;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 270px;
+      height: 120px;
+      background-color: $team-bg;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      &:nth-child(1) {
+        background-image: url(../images/features/tv-table.svg);
+      }
+
+      &:nth-child(2) {
+        background-image: url(../images/features/clock.svg);
+      }
+
+      &:nth-child(3) {
+        background-image: url(../images/features/computer.svg);
+      }
+
+      &:nth-child(4) {
+        background-image: url(../images/features/astronaut.svg);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.title {
+  font-weight: 700;
+  line-height: 1.1428;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $title-color;
+  margin-top: 30px;
+  text-align: left;
+
+  &-text {
+    font-weight: 400;
+    line-height: 1.71;
+    color: $text-color;
+  }
+}

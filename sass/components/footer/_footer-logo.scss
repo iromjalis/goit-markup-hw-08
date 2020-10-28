@@ -1,0 +1,8 @@
+.logo-footer {
+  @extend %logo;
+  color: $accent-color;
+
+  span {
+    color: $white-color;
+  }
+}
