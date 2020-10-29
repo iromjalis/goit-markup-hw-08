@@ -49,6 +49,9 @@ img {
     }
   }
   .header-menu {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
     &-burger {
       position: absolute;
       padding: auto;
@@ -60,6 +63,8 @@ img {
     &-close {
       display: inline-block;
       text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
