@@ -13,21 +13,34 @@
 </head>
 
 <body>
-    <header class="header-section">
+    <header class="header">
         <div class="container">
-
             <nav class="nav">
-                <a class="logo" href="./index.html">Web<span>Studio</span></a>
-                <button class="menu-button is-open" data-menu-button type="button" aria-expanded="false">
+                <a href="./index.html" class="logo">Web<span>Studio</span></a>
+            <button class="menu-button is-open" data-menu-button width="40" height="40">
+                <svg class="menu-button" weight="40" height="40"> 
+                    <use class="icon-cross" href="./images/svg/symbol-defs.svg#icon-close"></use>
+                    <use class="icon-menu" href="./images/svg/symbol-defs.svg#icon-menu"></use>
 
-                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                        <use class="icon-cross" href="./images/svg/symbol-defs.svg#icon-close"></use>
-                        <use class="icon-menu" href="./images/svg/symbol-defs.svg#icon-menu"></use>
-
-                    </svg>
-                </button>
+                </svg>
+            </button>
+            
             </nav>
-            <div class="modal" data-menu>
+            <div class="header-nav" data-menu>
+                <ul>
+                <li>Студия</li>
+                <li>Портфолио</li>
+                <li>Контакты</li>
+            </ul>
+            <ul>
+                <li>info@devstudio.com</li>
+                <li>+381 111 11 11</li>
+            </ul>
+        </div>
+        
+        </div>
+    </header>
+            <!-- <div class="modal" data-menu>
                 <ul class="modal-list">
                     <li class="modal-item"><a class="modal-link" href="./index.html">Студия</a></li>
                     <li class="modal-item"><a class="modal-link" href="">Портфолио</a></li>
@@ -52,7 +65,7 @@
                     </li>
                 </ul>
             </div>
-
+ -->
 
 
 

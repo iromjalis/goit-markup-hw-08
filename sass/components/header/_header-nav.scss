@@ -53,21 +53,59 @@
   }
 }
 
-.menu-button {
-  display: inline-flex;
-  margin-left: auto;
-  padding: 0;
-  border: none;
-  background-color: transparent;
+header{
+  position: relative;
+  padding-top: auto;
+  padding-bottom: auto;
+  align-items: center;
+  outline: 1px solid red;
 }
 
-.menu-button .icon-cross {
-  display: none;
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  max-width: 480px;
 }
 
-.menu-button.is-open .icon-menu {
-  display: none;
+.logo{
+  padding-top: 10px;
+  text-decoration: none;
 }
-.menu-button.is-open .icon-cross {
+.nav{
+  display: flex;
+}
+.menu-button{
+  display:inline-flex;
+  width: 40px;
+margin-left: auto;
+padding: 0;
+border: none;
+background-color: transparent;    
+}
+
+.menu-button .icon-cross{
+display: none;
+}
+
+.menu-button.is-open .icon-cross{
   display: block;
+}
+
+.menu-button.is-open .icon-menu{
+  display: none;
+}
+
+.header-nav{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  opacity: 0.3;
+  background-color: thistle;
+  width: 100%;
+  text-align: center;
+}
+.menu-button.is-open .header-nav{
+  opacity: 1;
 }

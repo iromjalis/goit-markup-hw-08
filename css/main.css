@@ -1162,7 +1162,7 @@ button:active, button:focus {
 
 .close-btn {
   position: absolute;
-  top: 8px;
+  top: 25px;
   right: 8px;
   width: 30px;
   height: 30px;
