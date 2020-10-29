@@ -1,5 +1,7 @@
 @charset "UTF-8";
 * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-margin-before: 0;
           margin-block-start: 0;
   -webkit-margin-after: 0;
@@ -1082,7 +1084,9 @@ button:active, button:focus {
 }
 
 .header-section {
-  height: 60px;
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
   border-bottom: 1px solid #ececec;
 }
 
@@ -1167,6 +1171,7 @@ button:active, button:focus {
   border-radius: 50%;
   cursor: pointer;
   text-align: center;
+  margin-left: auto;
 }
 
 .close-btn:hover .close-svg,

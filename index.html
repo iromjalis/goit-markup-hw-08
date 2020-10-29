@@ -18,7 +18,8 @@
 
             <nav class="nav">
                 <a class="logo" href="./index.html">Web<span>Studio</span></a>
-                <button class="menu-button is-open" data-menu-button type="button">
+                <button class="menu-button is-open" data-menu-button type="button" aria-expanded="false">
+
                     <svg width="40" height="40" aria-label="Переключатель мобильного меню">
                         <use class="icon-cross" href="./images/svg/symbol-defs.svg#icon-close"></use>
                         <use class="icon-menu" href="./images/svg/symbol-defs.svg#icon-menu"></use>
@@ -26,11 +27,29 @@
                     </svg>
                 </button>
             </nav>
-            <div class="modal">
+            <div class="modal" data-menu>
                 <ul class="modal-list">
                     <li class="modal-item"><a class="modal-link" href="./index.html">Студия</a></li>
                     <li class="modal-item"><a class="modal-link" href="">Портфолио</a></li>
                     <li class="modal-item"><a class="modal-link" href="">Контакты</a></li>
+                </ul>
+                <ul class="auth-nav flex">
+                    <li class="list">
+                        <a href="mailto:info@divstudio.com" class="auth-link link" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="auth-icon" width="16" height="12">
+                                <use href="./images/SVG/symbol-defs.svg#icon-envelope"></use>
+                            </svg>
+                            info@divstudio.com</a>
+                    </li>
+                    <li class="list">
+                        <a href="tel+38(096)111-11-11:" class="auth-link link" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="auth-icon" width="10" height="16">
+                                <use href="./images/SVG/symbol-defs.svg#icon-tel"></use>
+                            </svg>
+                            +38 096 111 11 11</a>
+                    </li>
                 </ul>
             </div>
 
@@ -43,6 +62,71 @@
 
 
     <main>
+        <!--Модальное окно-->
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="close-btn" type="button" data-modal-close>
+                    <svg class="close-svg" width="11" height="11">
+                        <use href="./images/SVG/symbol-defs.svg#icon-close-black"></use>
+                    </svg>
+                </button>
+
+                <!--   Форма в модалке   -->
+                <form class="group">
+                    <h2 class="group-title">Оставьте свои данные, мы вам перезвоним</h2>
+
+                    <!--Имя-->
+                    <p class="form-field">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" name="name" id="name" class="form-input" />
+                        <svg class="modal-svg" width="12" height="12">
+                            <use href="./images/SVG/symbol-defs.svg#icon-person"></use>
+                        </svg>
+                    </p>
+                    <!--Телефон-->
+                    <p class="form-field">
+                        <label for="" class="form-label">Телефон
+                            <input type="tel" class="form-input" name="name" placeholder="" />
+                            <svg class="modal-svg" width="12">
+                                <use href="./images/SVG/symbol-defs.svg#icon-trubka"></use>
+                            </svg>
+                        </label>
+                    </p>
+                    <!--Почта-->
+                    <p class="form-field">
+                        <label for="" class="form-label">
+                            Почта
+                            <input type="mail" class="form-input" name="name" placeholder=" " />
+                            <svg class="modal-svg" width="12">
+                                <use href="./images/SVG/symbol-defs.svg#icon-envelope-black"></use>
+                            </svg>
+                        </label>
+                    </p>
+                    <!--Комментарий-->
+                    <p class="form-field">
+                        <label for="" class="form-label">Комментарий
+                            <textarea class="textarea-input" name="comment" rows="5" cols="45"
+                                placeholder="Введите текст"></textarea>
+                        </label>
+                    </p>
+                    <!--Соглашаюсь-->
+                    <p class="form-field">
+                        <label class="label">
+                            <input class="checkbox" name="topic" type="checkbox" value="contract-title" />
+                            <span class="checkbox-text">Соглашаюсь с рассылкой и принимаю</span>
+                            <a href="" class="contract">
+                                <u>Условия договора</u>
+                            </a>
+                            <span class="checkbox-icon"></span>
+                        </label>
+                    </p>
+                    <p class="submit">
+                        <button submit="submit" class="hero-btn">Отправить</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+
         <div class="hero-section">
             <div class="container">
                 <h1 class="header-title">Эффективные решения для вашего бизнеса</h1>

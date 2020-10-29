@@ -1,4 +1,7 @@
 .nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
   &:hover,
   &:focus {
     color: $accent-color;
@@ -52,7 +55,7 @@
 
 .menu-button {
   display: inline-flex;
-  margin: 0;
+  margin-left: auto;
   padding: 0;
   border: none;
   background-color: transparent;
