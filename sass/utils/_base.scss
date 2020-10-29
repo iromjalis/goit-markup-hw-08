@@ -52,12 +52,13 @@ img {
     display: block;
     margin-top: auto;
     margin-bottom: auto;
+    outline: 1px solid red;
+
     &-burger {
       position: absolute;
       padding: auto;
       width: 40px;
       height: 40px;
-      outline: 1px solid red;
     }
 
     &-close {
