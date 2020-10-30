@@ -1,0 +1,23 @@
+.menu{
+    display: none;
+    position: absolute;
+    width: 100%;
+    min-height: 393px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    top:100%;
+    left:0;
+    text-align: center;
+    background-color: rgba(245, 222, 179, 0.8);
+    @extend %transition;
+    .container{
+        text-align: center;
+    }
+    .icon-cross &{
+        @extend %transition;
+    }
+    &.is-open{
+        display: block;
+    }
+}
+
