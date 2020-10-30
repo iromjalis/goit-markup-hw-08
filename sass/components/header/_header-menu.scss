@@ -1,4 +1,5 @@
-.menu{
+@media screen and (max-width:767px){
+.menu-container{
     display: none;
     position: absolute;
     width: 100%;
@@ -9,15 +10,43 @@
     left:0;
     text-align: center;
     background-color: rgba(245, 222, 179, 0.8);
-    @extend %transition;
-    .container{
+   .container{
         text-align: center;
     }
-    .icon-cross &{
-        @extend %transition;
-    }
+
     &.is-open{
         display: block;
     }
+}}
+
+@media screen and (min-width:768px){
+    .logo{
+        position: absolute;
+    }
+    .menu-container{
+        position: absolute;
+        display: flex;
+    }
+    .menu-list{
+        display: flex;
+        align-items: center;
+        margin-left: 171px;
+    }
+    .menu-item:not(:last-child){
+        margin-right: 50px;
+    }
+
+    .contacts-list{
+        margin-left: 106px;
+    }
 }
 
+@media screen and (min-width:1200px){
+    .contacts-list{
+        display: flex;
+    }
+    .contacts-item:not(:last-child){
+        margin-right: 50px;
+    }
+
+}
