@@ -1,0 +1,27 @@
+.partners {
+  fill: #afb1b8;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+  &-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  &-list-item {
+    width: 210px;
+    height: 90px;
+    margin: 15px;
+    border: 1px solid #afb1b8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  &-list {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,34 @@
+.team {
+  &-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #f5f4fa;
+  }
+  &-item img {
+    width: 100%;
+    height: 460px;
+    margin-bottom: 30px;
+  }
+  .name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.1875;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-color;
+    margin-bottom: 10px;
+  }
+  .profession {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.1875;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $text-color;
+    margin-bottom: 16px;
+  }
+}
+
+.heading {
+  @extend %heading;
+}
