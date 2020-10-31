@@ -21,9 +21,9 @@
         </a>
 
         <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu">
-          <svg class="burger-menu" data-menu-button width="40" height="40" aria-label="Переключатель мобильного меню">
-            <use class="icon-menu" href="../images/svg/symbol-defs.svg#icon-menu"></use>
-            <use class="icon-cross" href="../images/svg/symbol-defs.svg#icon-close"></use>
+          <svg class="burger-menu" data-menu-button width="24" height="18" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" width="24" height="16" href="../images/svg/symbol-defs.svg#icon-menu"></use>
+            <use class="icon-cross" width="18" height="18" href="../images/svg/symbol-defs.svg#icon-close"></use>
 
           </svg>
         </button>
@@ -35,17 +35,80 @@
             <li class="menu-item"><a href="#contacts" class="link">Контакты</a></li>
           </ul>
           <ul class="contacts-list">
-            <li class="contacts-item"><a class="contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <li class="contacts-item">
+              <a class="contacts link" href="mailto:info@devstudio.com">
+                <svg class="contacts-svg" width="16" height="11">
+                  <use href="./images/svg/symbol-defs.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a>
             </li>
-            <li class="contacts-item"><a class="contacts link" href="telto:+380961111111">+38 096 111 11 11</a></li>
+            <li class="contacts-item">
+              <a class="contacts link" href="telto:+380961111111">
+                <svg class="contacts-svg" width="10" height="15">
+                  <use href="./images/svg/symbol-defs.svg#icon-tel"></use>
+                </svg>
+                +38 096 111 11 11</a></li>
           </ul>
         </div>
 
       </nav>
     </div>
   </header>
+  <main>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-button" data-modal-close>
+          <svg width="11" height="11">
+            <use class="icon-cross" width="18" height="18" href="../images/svg/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
 
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="hero-heading">Эффективные решения для вашего бизнеса</h1>
+        <button class="button" data-modal-open>Заказать услугу</button>
+      </div>
+    </section>
 
+    <!--Чем можем похвастаться-->
+    <section class="features-section">
+      <h2 class="heading visually-hidden">Особенности</h2>
+      <div class="features container">
+        <ul class="features-list">
+          <li class="features-item">
+            <h3 class="title">Внимание к деталям</h3>
+            <p class="title-text">
+              Идейные соображения, а также начало повседневной работы по формированию позиции.
+            </p>
+          </li>
+          <li class="features-item">
+            <h3 class="title">Пунктуальность</h3>
+            <p class="title-text">
+              Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+            </p>
+          </li>
+          <li class="features-item">
+            <h3 class="title">Планирование</h3>
+            <p class="title-text">
+              Равным образом консультации с широким активом в значительной степени обуславливает.
+            </p>
+          </li>
+          <li class="features-item">
+            <h3 class="title">Современные технологии</h3>
+            <p class="title-text">
+              Значимость этих проблем настолько очевидна, что реализация плановых заданий.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
   <script src="js/menu.js"></script>
   <script src="js/modal.js"></script>
 </body>

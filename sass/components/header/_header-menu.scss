@@ -9,8 +9,8 @@
         top: 100%;
         left: 0;
         text-align: center;
-        /*     background-color: rgba(180, 142, 72, 0.1);
- */
+        background-color: rgba(180, 142, 72, 0.1);
+
         .container {
             text-align: center;
         }
@@ -92,4 +92,15 @@
         margin: 0 auto;
         margin-top: 12px;
     }
+}
+.contacts {
+    &-svg {
+        fill: #757575;
+        vertical-align: baseline;
+        align-items: center;
+        margin-right: 10px;
+    }
+    /*     &.link {
+        margin-left: 10px;
+    } */
 }
