@@ -307,11 +307,15 @@ button:active, button:focus {
   color: #2196f3;
 }
 
-.menu-item:not(:last-child) {
+.menu-item:nth-child(1) {
+  margin-bottom: 52px;
+}
+
+.menu-item:nth-child(2) {
   margin-bottom: 40px;
 }
 
-.menu-item:last-child {
+.menu-item:nth-child(3) {
   margin-bottom: 60px;
 }
 
@@ -323,18 +327,20 @@ button:active, button:focus {
   margin-bottom: 16px;
 }
 
-.link.current {
+.current {
+  display: inline-block;
   position: relative;
 }
 
-.current:before {
-  display: block;
+.current::after {
   position: absolute;
+  display: block;
   content: "";
   width: 100%;
-  height: 2px;
-  left: 0;
-  bottom: 0;
-  color: #2196f3;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 12px;
 }
 /*# sourceMappingURL=main.css.map */
