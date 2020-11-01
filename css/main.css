@@ -286,6 +286,8 @@ button:active, button:focus {
     padding: 0;
     border: none;
     background-color: transparent;
+    fill: #212121;
+    color: blue;
   }
 }
 
@@ -293,6 +295,11 @@ button:active, button:focus {
   .menu-button {
     display: none;
   }
+}
+
+.menu-button {
+  background-color: burlywood;
+  color: tomato;
 }
 
 .burger-menu .icon-cross {
@@ -305,6 +312,7 @@ button:active, button:focus {
 
 .burger-menu.is-open .icon-cross {
   display: block;
+  fill: #212121;
 }
 
 @media screen and (max-width: 767px) {
