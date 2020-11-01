@@ -3,6 +3,7 @@
     width: 206px;
     height: 44px;
     justify-content: center;
+    margin: 0 auto;
   }
 
   &-list-footer {
@@ -22,7 +23,6 @@
   background-color: transparent;
   width: 44px;
   height: 44px;
-  margin-bottom: 30px;
   background: rgba(255, 255, 255, 0.1);
   @extend %transition;
 

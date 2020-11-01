@@ -1,0 +1,37 @@
+/* === BUTTON === */
+
+.portfolio-main {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .btn-list {
+    display: flex;
+    flex-wrap: wrap;
+    background: #f5f4fa;
+    border-radius: 4px;
+    padding: 6px 22px;
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #212121;
+  }
+  .hero-btn {
+    margin-right: 8px;
+    margin-bottom: 15px;
+    @extend %portfolio-btn;
+    @extend %transition;
+
+    &:hover,
+    &:focus {
+      color: $white-color;
+      background-color: $accent-color;
+      transform: color, background-color;
+    }
+  }
+}

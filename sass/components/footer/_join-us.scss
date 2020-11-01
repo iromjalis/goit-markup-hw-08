@@ -1,22 +1,22 @@
-.subscribe {
+.join-us {
   &-section {
     width: 206px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     margin-top: 60px;
   }
-}
 
-.footer-title {
-  min-width: 145px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $white-color;
-  margin: 0 auto;
-  margin-top: 0px;
-  margin-bottom: 20px;
+  &-title {
+    min-width: 145px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $white-color;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
 }

@@ -5,8 +5,6 @@
         padding: 0;
         border: none;
         background-color: transparent;
-        fill: $title-color;
-        color: blue;
     }
 }
 @media screen and (min-width: 768px) {
@@ -16,8 +14,7 @@
 }
 
 .menu-button {
-    background-color: burlywood;
-    color: tomato;
+    background-color: transparent;
 }
 .burger-menu .icon-cross {
     display: none;
