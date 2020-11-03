@@ -1,12 +1,15 @@
 /* === PORTFOLIO ===*/
+.portfolio-main {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .card-container {
   display: flex;
   flex-wrap: wrap;
 
   .card-element {
     overflow: hidden;
-    width: 370px;
-    margin-right: 30px;
+    width: 100%;
     margin-bottom: 30px;
     @extend %transition;
     background: $white-color;
@@ -36,7 +39,7 @@
 }
 
 .card-img {
-  width: 370px;
+  width: 100%;
   height: 294px;
   position: relative;
   overflow: hidden;
@@ -60,6 +63,10 @@
       letter-spacing: 0.03em;
       color: $white-color;
     }
+    
+  }
+  img{
+    width: 100%;
   }
 }
 
@@ -68,6 +75,8 @@
   margin: 20px 24px;
 
   .img {
+    padding-left: 24px;
+    width: 100%;
     &-title {
       font-weight: 700;
       font-size: 18px;
@@ -79,7 +88,7 @@
       padding-bottom: 4px;
       padding-left: 24px;
       margin: 0px auto;
-
+    }
       &-description {
         font-size: 16px;
         line-height: 1.87;
@@ -89,4 +98,4 @@
       }
     }
   }
-}
+

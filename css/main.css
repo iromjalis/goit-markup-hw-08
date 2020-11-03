@@ -171,7 +171,8 @@ footer,
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid red;
+  /*     outline: 1px solid red;
+ */
 }
 
 @media screen and (min-width: 480px) {
@@ -224,28 +225,6 @@ button:active, button:focus {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.portfolio-main .hero-btn {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.625;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  border: 1px solid transparent;
-  background: #f5f4fa;
-  border-radius: 4px;
-  cursor: pointer;
-  padding: 6px 22px;
-}
-
-.portfolio-main .hero-btn:hover {
-  background: #2196f3;
-  color: #fff;
-  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-
 .menu-item, .contacts-item {
   font-weight: 500;
   font-size: 14px;
@@ -263,7 +242,7 @@ button:active, button:focus {
   letter-spacing: 0.03em;
 }
 
-.backdrop, .social-link-footer, footer .hero-btn, .portfolio-main .hero-btn, .card-container .card-element, .card-img, .card-img .overlay {
+.backdrop, .social-link-footer, footer .hero-btn, .card-container .card-element, .card-img, .card-img .overlay {
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-property: all;
@@ -437,7 +416,7 @@ button:active, button:focus {
   background-color: #2196f3;
   border-radius: 4px;
   margin: 0 auto;
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 .contacts {
@@ -884,9 +863,12 @@ footer .hero-btn img {
 }
 
 /* === BUTTON === */
-.portfolio-main {
+.portfolio-main .container {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
+}
+
+.portfolio-main .container .btn-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -894,37 +876,38 @@ footer .hero-btn img {
       flex-wrap: wrap;
 }
 
-.portfolio-main .btn-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background: #f5f4fa;
-  border-radius: 4px;
-  padding: 6px 22px;
-  margin-bottom: 50px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.625;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-}
-
-.portfolio-main .hero-btn {
+.portfolio-main .container .btn-item {
   margin-right: 8px;
+  background: #F5F4FA;
+  border-radius: 4px;
+}
+
+.portfolio-main .container .btn-item:nth-child(n-3) {
   margin-bottom: 15px;
 }
 
-.portfolio-main .hero-btn:hover, .portfolio-main .hero-btn:focus {
-  color: #fff;
-  background-color: #2196f3;
-  -webkit-transform: color, background-color;
-          transform: color, background-color;
+.portfolio-main .container .btn-item:hover, .portfolio-main .container .btn-item:focus {
+  background: #2196F3;
+  color: #FFFFFF;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-main .container .btn-item .button {
+  display: inline-block;
+  padding: 6px 22px;
+}
+
+.portfolio-main .container .btn-item .button:hover, .portfolio-main .container .btn-item .button:focus {
+  color: #FFFFFF;
 }
 
 /* === PORTFOLIO ===*/
+.portfolio-main {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .card-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -935,8 +918,7 @@ footer .hero-btn img {
 
 .card-container .card-element {
   overflow: hidden;
-  width: 370px;
-  margin-right: 30px;
+  width: 100%;
   margin-bottom: 30px;
   background: #fff;
   border: 1px solid #eeeeee;
@@ -966,7 +948,7 @@ footer .hero-btn img {
 }
 
 .card-img {
-  width: 370px;
+  width: 100%;
   height: 294px;
   position: relative;
   overflow: hidden;
@@ -991,9 +973,18 @@ footer .hero-btn img {
   color: #fff;
 }
 
+.card-img img {
+  width: 100%;
+}
+
 .card-title {
   display: inline;
   margin: 20px 24px;
+}
+
+.card-title .img {
+  padding-left: 24px;
+  width: 100%;
 }
 
 .card-title .img-title {
@@ -1008,7 +999,7 @@ footer .hero-btn img {
   margin: 0px auto;
 }
 
-.card-title .img-title-description {
+.card-title .img-description {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
