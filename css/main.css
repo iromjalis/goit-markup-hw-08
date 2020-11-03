@@ -242,7 +242,7 @@ button:active, button:focus {
   letter-spacing: 0.03em;
 }
 
-.backdrop, .social-link-footer, footer .hero-btn, .card-container .card-element, .card-img, .card-img .overlay {
+.backdrop, .social-link, .social-link-footer, footer .hero-btn, .card-container .card-element, .card-img, .card-img .overlay {
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-property: all;
@@ -677,6 +677,56 @@ button:active, button:focus {
 
 .social-item svg {
   fill: #757575;
+}
+
+.social-section {
+  width: 206px;
+  height: 44px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background-color: transparent;
+  width: 44px;
+  height: 44px;
+  fill: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover, .social-link:focus,
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: #fff;
+  border: 1px solid #2196f3;
+  background-color: #2196f3;
+}
+
+.social-link .social-icon {
+  fill: #AFB1B8;
 }
 
 .partners {
