@@ -1,122 +1,130 @@
 @media screen and (max-width: 767px) {
-    .menu-container {
-        display: none;
-        position: absolute;
-        width: 100%;
-        min-height: 393px;
-        padding-top: 60px;
-        padding-bottom: 60px;
-        top: 100%;
-        left: 0;
-        text-align: center;
-        background-color: #fff;
-        border: 1px solid #ececec;
+  /*Навигация по сайту в бургере*/
+  .menu-container {
+    display: none;
+    width: 100%;
+    min-height: 393px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    top: 100%;
+    left: 0;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ececec;
 
-        .container {
-            text-align: center;
-        }
-
-        &.is-open {
-            display: block;
-        }
+    &.is-open {
+      display: block;
     }
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .logo {
-        position: absolute;
-    }
-    .menu-container {
-        position: absolute;
-        display: flex;
-    }
-    .menu-list {
-        display: flex;
-        align-items: center;
-        margin-left: 171px;
-    }
-    .menu-item:not(:last-child) {
-        margin-right: 50px;
-    }
+  .contacts-list {
+    margin-left: 84px;
+  }
 
-    .contacts-list {
-        margin-left: 106px;
-    }
+  .header .container {
+    width: 768px;
+    text-align: left;
+  }
+  .menu-container {
+    display: inline-flex;
+    margin-left: 88px;
+  }
+  .menu-list {
+    display: flex;
+    align-items: center;
+  }
+  .menu-item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .contacts-list {
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+  }
+
+  .contacts-svg {
+    margin-right: 8px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .contacts-list {
-        display: flex;
-    }
-    .contacts-item:not(:last-child) {
-        margin-right: 50px;
-    }
+  .contacts-list {
+    display: flex;
+  }
+  .contacts-item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 .menu-item {
-    @extend %link;
-    color: $title-color;
-    &.current {
-        color: $accent-color;
-    }
+  @extend %link;
+  color: $title-color;
+  &.current {
+    color: $accent-color;
+  }
 }
-@media screen and (max-width: 767px){
-    .menu-item{
+@media screen and (max-width: 767px) {
+  .menu-item {
     &:nth-child(1) {
-        margin-bottom: 52px;
+      margin-bottom: 52px;
     }
     &:nth-child(2) {
-        margin-bottom: 40px;
+      margin-bottom: 40px;
     }
     &:nth-child(3) {
-        margin-bottom: 60px;
-    }}
+      margin-bottom: 60px;
+    }
+  }
 }
 
 .contacts-item {
-    @extend %link;
-    .contacts.link {
-        color: #757575;
-        &:hover, &:focus, &:hover .contacts-svg, &:focus .contacts-svg{
-            color: $accent-color;
-            fill: $accent-color;
-        }
+  @extend %link;
+  .contacts.link {
+    color: #757575;
+    &:hover,
+    &:focus,
+    &:hover .contacts-svg,
+    &:focus .contacts-svg {
+      color: $accent-color;
+      fill: $accent-color;
     }
-    
+  }
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
+  .contacts-item:first-child {
+    margin-bottom: 16px;
+  }
+}
 
-    .contacts-item:first-child {
-        margin-bottom: 16px;
-    }}
-    
-@media screen and (max-width: 1199px){
-
-    .contacts-item:first-child {
-        margin-bottom: 10px;
-    }}
+@media screen and (max-width: 1199px) {
+  .contacts-item:first-child {
+    margin-bottom: 10px;
+  }
+}
 .current {
-    display: inline-block;
-    position: relative;
-    &::after {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 100%;
-        height: 4px;
-        background-color: $accent-color;
-        border-radius: 4px;
-        margin: 0 auto;
-        margin-top: 8px;
-    }
+  display: inline-block;
+  position: relative;
+  &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 8px;
+  }
 }
 .contacts {
-    &-svg {
-        fill: #757575;
-        vertical-align: baseline;
-        align-items: center;
-        margin-right: 10px;
-    }
-    /*     &.link {
+  &-svg {
+    fill: #757575;
+    vertical-align: baseline;
+    align-items: center;
+    margin-right: 10px;
+  }
+  /*     &.link {
         margin-left: 10px;
     } */
 }

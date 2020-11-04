@@ -1,15 +1,15 @@
-.header{
-    position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
-    border-bottom: 1px solid #ececec;
-    .nav{
+.header {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-bottom: 1px solid #ececec;
+
+  .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 60px;
     padding-top: 10px;
     padding-bottom: 10px;
-
-}
+  }
 }
