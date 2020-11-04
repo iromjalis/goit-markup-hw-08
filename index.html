@@ -63,8 +63,70 @@
             <use href="./images/SVG/sprite.svg#icon-close-black"></use>
           </svg>
         </button>
+      </div>
+    </div>
 
+    <!--Модальное окно-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-btn" type="button" data-modal-close>
+          <svg class="close-svg" width="11" height="11">
+            <use href="./images/SVG/symbol-defs.svg#icon-close-black"></use>
+          </svg>
+        </button>
 
+        <!--   Форма в модалке   -->
+        <form class="group">
+          <h2 class="group-title">Оставьте свои данные, мы вам перезвоним</h2>
+
+          <!--Имя-->
+          <p class="form-field">
+            <label for="name" class="form-label">Имя</label>
+            <input type="text" name="name" id="name" class="form-input" />
+            <svg class="modal-svg" width="12" height="12">
+              <use href="./images/SVG/symbol-defs.svg#icon-person"></use>
+            </svg>
+          </p>
+          <!--Телефон-->
+          <p class="form-field">
+            <label for="" class="form-label">Телефон
+              <input type="tel" class="form-input" name="name" placeholder="" />
+              <svg class="modal-svg" width="12">
+                <use href="./images/SVG/symbol-defs.svg#icon-trubka"></use>
+              </svg>
+            </label>
+          </p>
+          <!--Почта-->
+          <p class="form-field">
+            <label for="" class="form-label">
+              Почта
+              <input type="mail" class="form-input" name="name" placeholder=" " />
+              <svg class="modal-svg" width="12">
+                <use href="./images/SVG/symbol-defs.svg#icon-envelope-black"></use>
+              </svg>
+            </label>
+          </p>
+          <!--Комментарий-->
+          <p class="form-field">
+            <label for="" class="form-label">Комментарий
+              <textarea class="textarea-input" name="comment" rows="5" cols="45" placeholder="Введите текст"></textarea>
+            </label>
+          </p>
+          <!--Соглашаюсь-->
+          <p class="form-field">
+            <label class="label">
+              <input class="checkbox" name="topic" type="checkbox" value="contract-title" />
+              <span class="checkbox-text">Соглашаюсь с рассылкой и принимаю</span>
+              <a href="" class="contract">
+                <u>Условия договора</u>
+              </a>
+              <span class="checkbox-icon"></span>
+            </label>
+          </p>
+          <p class="submit">
+            <button submit="submit" class="hero-btn">Отправить</button>
+          </p>
+        </form>
       </div>
     </div>
 

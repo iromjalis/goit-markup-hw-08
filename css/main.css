@@ -733,10 +733,6 @@ button:active, button:focus {
   fill: #afb1b8;
 }
 
-.partners:hover, .partners:focus {
-  fill: #2196f3;
-}
-
 .partners-section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -752,6 +748,13 @@ button:active, button:focus {
   border-radius: 4px;
   text-align: center;
   padding-top: 20px;
+}
+
+.partners-list-item:hover, .partners-list-item:focus,
+.partners-list-item:hover .partners,
+.partners-list-item:focus .partners {
+  border-color: #2196f3;
+  fill: #2196f3;
 }
 
 .partners-list {
