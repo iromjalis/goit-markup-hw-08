@@ -1,7 +1,7 @@
 .modal {
   position: absolute;
-  min-width: 528px;
-  max-height: 581px;
+  min-width: 450px;
+  max-height: 609px;
   background-color: $white-color;
 
   top: 50%;
@@ -10,7 +10,8 @@
   margin-top: 20px;
   padding: 40px;
 
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
   animation: open-close 200ms;
@@ -83,7 +84,7 @@ textarea:focus {
 .group-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: $title-color;
@@ -184,7 +185,7 @@ textarea:focus {
   margin-top: 4px;
 
   &::before {
-    content: "";
+    content: '';
     display: inline-block;
     border: 1px solid rgb(163, 158, 158);
     border-radius: 4px;
@@ -199,7 +200,7 @@ textarea:focus {
   &::after {
     position: absolute;
     left: 0px;
-    content: "";
+    content: '';
     border-radius: 4px;
     display: inline-block;
     width: 16px;
@@ -215,42 +216,21 @@ textarea:focus {
   }
 
   &-text {
-    width: 400px;
-    height: 24px;
-    left: 612px;
-    top: 658px;
-
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.667;
     letter-spacing: 0.03em;
-
     color: $text-color;
     margin-left: 23px;
   }
 }
 
-.contract {
-  width: 400px;
-  height: 24px;
-  left: 612px;
-  top: 658px;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+.contract u {
+  font-size: 12px;
+  line-height: 1.667;
   letter-spacing: 0.03em;
 
-  color: $text-color;
-  margin-left: 23px;
-
-  &-title {
-    margin-bottom: 30px;
-  }
-
-  a& {
-    margin: 0;
-    color: $accent-color;
-  }
+  color: $accent-color;
+  text-decoration: underline;
 }
 
 .checkbox {
@@ -268,5 +248,18 @@ textarea:focus {
     border: 2px solid $accent-color;
     border: none;
   }
+}
+.submit {
+  text-align: center;
+  margin-top: 30px;
+}
+.button {
+  min-width: 200px;
+  min-height: 50px;
+  @extend %btn;
+  display: inline-block;
+  padding: 10px 32px;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
 /* === END CHECKBOX ===*/

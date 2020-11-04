@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -203,7 +204,7 @@ button:active, button:focus {
   border: none;
 }
 
-.hero-section .button, footer .hero-btn {
+.button, .hero-section .button, footer .hero-btn {
   display: inline-block;
   letter-spacing: 0.06em;
   font-weight: 700;
@@ -220,7 +221,7 @@ button:active, button:focus {
   cursor: pointer;
 }
 
-.hero-section .button:hover, footer .hero-btn:hover {
+.button:hover, footer .hero-btn:hover {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -242,7 +243,7 @@ button:active, button:focus {
   letter-spacing: 0.03em;
 }
 
-.backdrop, .social-link, .social-link-footer, footer .hero-btn, .card-container .card-element, .card-img, .card-img .overlay {
+.backdrop, .form-input, .social-link, .social-link-footer, footer .hero-btn, .card-container .card-element, .card-img, .card-img .overlay {
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-property: all;
@@ -434,29 +435,22 @@ button:active, button:focus {
   margin-right: 10px;
 }
 
-.hero-section {
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 400px;
-  padding-top: 118px;
-  padding-bottom: 118px;
-  text-align: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero.jpg);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 99;
+  overflow: auto;
 }
 
-.hero-section .button {
-  min-width: 200px;
-  min-height: 50px;
-}
-
-.hero-heading {
-  font-weight: 900;
-  font-size: 26px;
-  line-height: 1.62;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #fff;
-  margin-bottom: 30px;
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  overflow-y: scroll;
 }
 
 .backdrop {
@@ -470,28 +464,30 @@ button:active, button:focus {
   z-index: 99;
 }
 
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  overflow-y: scroll;
-}
-
 .modal {
-  margin-top: 15px;
-  width: 450px;
-  height: 609px;
   position: absolute;
+  min-width: 450px;
+  max-height: 609px;
   background-color: #fff;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  margin-top: 20px;
+  padding: 40px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   -webkit-animation: open-close 200ms;
           animation: open-close 200ms;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden .modal {
+  opacity: 0;
+  margin-top: 50px;
+  margin-top: 50px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 @-webkit-keyframes open-close {
@@ -524,17 +520,260 @@ button:active, button:focus {
   }
 }
 
+.close-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  fill: #212121;
+}
+
 .close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
   width: 30px;
   height: 30px;
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
   text-align: center;
+}
+
+.close-btn:hover .close-svg,
+.close-btn:focus .close-svg {
+  fill: #2196f3;
+}
+
+/* === FORM === */
+input:hover,
+input:focus,
+input:hover + .modal-svg,
+input:focus + .modal-svg,
+textarea:hover,
+textarea:focus {
+  border-color: #2196f3;
+  fill: #2196f3;
+  outline: none;
+}
+
+/* Оставьте свои данные, мы вам перезвоним */
+.group-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  padding: 0 auto;
+  margin-left: auto;
+  margin-bottom: 12px;
+}
+
+/* P секция для ввода*/
+.form {
+  /* надпись над полем ввода*/
+  /* поле ввода*/
+}
+
+.form-field {
+  position: relative;
+  margin: 0;
+}
+
+.form-field:last-child {
+  text-align: center;
+}
+
+.form-label {
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin-bottom: 4px;
+}
+
+.form-input {
+  width: 100%;
+  min-height: 40px;
+  padding-left: 35px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-bottom: 10px;
+}
+
+.form-input:hover, .form-input:focus {
+  border-color: #2196f3;
+  fill: #2196f3;
+  outline: none;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  fill: #2196f3;
+  border-color: #2196f3;
+  color: #2196f3;
+  cursor: pointer;
+  outline: none;
+}
+
+/* svg */
+.modal-svg {
+  position: absolute;
+  top: 32px;
+  left: 15px;
+  width: 12px;
+  height: 12px;
+  fill: #212121;
+}
+
+/*чтобы пользователь не увеличил поле*/
+.textarea-input {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  resize: none;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.textarea-input:hover, .textarea-input:focus {
+  border-color: #2196f3;
+  fill: #2196f3;
+  outline: none;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  margin-top: 4px;
+}
+
+.checkbox::before {
+  content: '';
+  display: inline-block;
+  border: 1px solid #a39e9e;
+  border-radius: 4px;
+  width: 16px;
+  height: 15px;
+  background-color: transparent;
+  vertical-align: baseline;
+  -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox::after {
+  position: absolute;
+  left: 0px;
+  content: '';
+  border-radius: 4px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/SVG/icon-check.svg);
+  -webkit-transform: translatey(35px);
+          transform: translatey(35px);
+  -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked::after {
+  -webkit-transform: translatey(0);
+          transform: translatey(0);
+}
+
+.checkbox-text {
+  font-size: 12px;
+  line-height: 1.667;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-left: 23px;
+}
+
+.contract u {
+  font-size: 12px;
+  line-height: 1.667;
+  letter-spacing: 0.03em;
+  color: #2196f3;
+  text-decoration: underline;
+}
+
+.checkbox-icon {
+  margin: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 4px;
+}
+
+.checkbox:checked + .icon {
+  background-image: url(../images/SVG/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border: 2px solid #2196f3;
+  border: none;
+}
+
+.submit {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.button {
+  min-width: 200px;
+  min-height: 50px;
+  display: inline-block;
+  padding: 10px 32px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+/* === END CHECKBOX ===*/
+.hero-section {
+  width: 100%;
+  height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero.jpg);
+}
+
+.hero-section .button {
+  min-width: 200px;
+  min-height: 50px;
+}
+
+.hero-heading {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 30px;
 }
 
 /* !=== FEATURES===*/
