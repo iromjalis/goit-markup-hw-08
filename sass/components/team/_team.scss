@@ -39,3 +39,11 @@
 .heading {
   @extend %heading;
 }
+
+@media screen and (min-width: 768px){
+  .team-item{
+    display: inline-flex;
+    flex-wrap: wrap;
+width: 50%;
+  }
+}

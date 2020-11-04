@@ -20,5 +20,14 @@
     text-transform: uppercase;
     color: $white-color;
     margin-bottom: 30px;
+
+  }
+}
+
+@media (max-width: 1199px){
+  .hero-heading{
+    max-width: 360px;
+    margin: 0 auto;
+    margin-bottom: 30px;
   }
 }

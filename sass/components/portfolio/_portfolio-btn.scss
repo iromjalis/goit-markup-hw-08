@@ -1,10 +1,9 @@
 /* === BUTTON === */
 
 .portfolio-main .container {
-  padding-top: 60px;
-  padding-bottom: 40px;
-
   .btn{
+    
+
   &-list{
     display: flex;
     flex-wrap: wrap;
@@ -18,19 +17,17 @@
 
   }
 
-    &:hover, &:focus{
+    &:hover .button, &:focus .button{
     background: #2196F3;
     color: #FFFFFF;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.button{
-  display: inline-block;
-  padding: 6px 22px;
-  &:hover, &:focus{
-    color: #FFFFFF;
-}
-
-}
     }
   }
+}
+
+.button{
+  @extend %portfolio-btn;
+  background-color: #F5F4FA;
+  color: $title-color;
 }

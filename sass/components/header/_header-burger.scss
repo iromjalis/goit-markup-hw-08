@@ -2,7 +2,7 @@
     .menu-button {
         display: inline-flex;
         margin: 0;
-        padding: 0;
+        padding: 10px;
         border: none;
         background-color: transparent;
     }
@@ -26,4 +26,12 @@
 .burger-menu.is-open .icon-cross {
     display: block;
     fill: $title-color;
+    &:hover, &:focus{
+        fill: $accent-color;
+    }
+}
+.menu-button:hover .icon-cross,
+.menu-button:hover .icon-menu{
+        fill: $accent-color;
+    
 }

@@ -7,11 +7,17 @@
 
   &-list {
     align-items: center;
+    margin: -15px;
+    outline: 1px solid red;
   }
 
   &-item {
+    display: inline-block;
     width: 100%;
+    height: 226px;
     background: #ffffff;
+    margin: 15px;
+    outline: 1px solid green;
 
     &:nth-child(1)::before {
       background-image: url(../images/features/tv-table.svg);
@@ -74,9 +80,17 @@
     line-height: 1.71;
     color: $text-color;
     margin-bottom: 30px;
-
-    /*     &:not(:last-child) {
-      margin-bottom: 30px;
-    } */
   }
+}
+
+@media (min-width: 768px){
+  .features-item{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: calc((100%-60px)/2);
+    min-height: 251px;
+}
+.features-item .title{
+  text-align: left;
+}
 }

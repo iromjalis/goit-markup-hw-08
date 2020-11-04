@@ -58,6 +58,9 @@
     &.current {
         color: $accent-color;
     }
+}
+@media screen and (max-width: 767px){
+    .menu-item{
     &:nth-child(1) {
         margin-bottom: 52px;
     }
@@ -66,19 +69,31 @@
     }
     &:nth-child(3) {
         margin-bottom: 60px;
-    }
+    }}
 }
 
 .contacts-item {
     @extend %link;
     .contacts.link {
         color: #757575;
+        &:hover, &:focus, &:hover .contacts-svg, &:focus .contacts-svg{
+            color: $accent-color;
+            fill: $accent-color;
+        }
     }
-    &:nth-child(1) {
-        margin-bottom: 16px;
-    }
+    
 }
+@media screen and (max-width: 767px){
 
+    .contacts-item:first-child {
+        margin-bottom: 16px;
+    }}
+    
+@media screen and (max-width: 1199px){
+
+    .contacts-item:first-child {
+        margin-bottom: 10px;
+    }}
 .current {
     display: inline-block;
     position: relative;
