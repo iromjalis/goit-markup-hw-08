@@ -2,8 +2,8 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Студия</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -17,22 +17,26 @@
   <header class="header">
     <div class="container">
       <nav class="nav">
-        <a href="./index.html" class="logo">Web<span>Studio</span>
-        </a>
+        <a href="./index.html" class="logo">Web<span>Studio</span> </a>
 
         <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu">
           <svg class="burger-menu" data-menu-button width="24" height="18" aria-label="Переключатель мобильного меню">
             <use class="icon-menu" width="24" height="16" href="../images/svg/sprite.svg#icon-menu"></use>
             <use class="icon-cross" width="18" height="18" href="../images/svg/sprite.svg#icon-close"></use>
-
           </svg>
         </button>
 
         <div class="menu-container" data-menu>
           <ul class="menu-list">
-            <li class="menu-item"><a href="./index.html" class="link current">Студия</a></li>
-            <li class="menu-item"><a href="./portfolio.html" class="link">Портфолио</a></li>
-            <li class="menu-item"><a href="#contacts" class="link">Контакты</a></li>
+            <li class="menu-item">
+              <a href="./index.html" class="link current">Студия</a>
+            </li>
+            <li class="menu-item">
+              <a href="./portfolio.html" class="link">Портфолио</a>
+            </li>
+            <li class="menu-item">
+              <a href="#contacts" class="link">Контакты</a>
+            </li>
           </ul>
           <ul class="contacts-list">
             <li class="contacts-item">
@@ -47,16 +51,14 @@
                 <svg class="contacts-svg" width="10" height="15">
                   <use href="./images/svg/sprite.svg#icon-tel"></use>
                 </svg>
-                +38 096 111 11 11</a></li>
+                +38 096 111 11 11</a>
+            </li>
           </ul>
         </div>
-
       </nav>
     </div>
   </header>
   <main>
-
-
     <!--Модальное окно-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -108,9 +110,7 @@
             <label class="label">
               <input class="checkbox" name="topic" type="checkbox" value="contract-title" />
               <span class="checkbox-text">Соглашаюсь с рассылкой и принимаю </span><a href=""
-                class="contract"><u>Условия
-                  договора</u>
-              </a>
+                class="contract"><u>Условия договора</u> </a>
               <span class="checkbox-icon"></span>
             </label>
           </p>
@@ -124,8 +124,9 @@
     <section class="hero-section">
       <div class="container">
         <h1 class="hero-heading">Эффективные решения для вашего бизнеса</h1>
-        <button class="button" type="button" data-modal-open>Заказать услугу</button>
-
+        <button class="button" type="button" data-modal-open>
+          Заказать услугу
+        </button>
       </div>
     </section>
 
@@ -137,26 +138,52 @@
           <li class="features-item">
             <h3 class="title">Внимание к деталям</h3>
             <p class="title-text">
-              Идейные соображения, а также начало повседневной работы по формированию позиции.
+              Идейные соображения, а также начало повседневной работы по
+              формированию позиции.
             </p>
           </li>
           <li class="features-item">
             <h3 class="title">Пунктуальность</h3>
             <p class="title-text">
-              Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+              Задача организации, в особенности же рамки и место обучения
+              кадров влечет за собой.
             </p>
           </li>
           <li class="features-item">
             <h3 class="title">Планирование</h3>
             <p class="title-text">
-              Равным образом консультации с широким активом в значительной степени обуславливает.
+              Равным образом консультации с широким активом в значительной
+              степени обуславливает.
             </p>
           </li>
           <li class="features-item">
             <h3 class="title">Современные технологии</h3>
             <p class="title-text">
-              Значимость этих проблем настолько очевидна, что реализация плановых заданий.
+              Значимость этих проблем настолько очевидна, что реализация
+              плановых заданий.
             </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--Чем мы занимаемся-->
+    <section class="work-section">
+      <div class="work container">
+        <h2 class="heading">Чем мы занимаемся</h2>
+        <ul class="work-list">
+          <li class="work-item">
+            <img src="./images/works/photo1.jpg" alt="лаптоп" width="370" height="294" />
+            <p class="work-title">Десктопные приложения</p>
+          </li>
+
+          <li class="work-item">
+            <img src="./images/works/photo2.jpg" alt="тел" width="370" height="294" />
+            <p class="work-title">Мобильные приложения</p>
+          </li>
+          <li class="work-item">
+            <img src="./images/works/photo3.jpg" alt="экран" width="370" height="294" />
+            <p class="work-title">Дизайнерские решения</p>
           </li>
         </ul>
       </div>
@@ -360,16 +387,16 @@
               </svg>
             </a>
           </li>
-          <li class=" partners-list-item">
-            <a href="/" class=" partners-logo" target="_blank" rel="noopener noreferrer Nofollow">
-              <svg class=" partners" width="59" height="47">
+          <li class="partners-list-item">
+            <a href="/" class="partners-logo" target="_blank" rel="noopener noreferrer Nofollow">
+              <svg class="partners" width="59" height="47">
                 <use href="./images/SVG/sprite.svg#icon-logo-5"></use>
               </svg>
             </a>
           </li>
-          <li class=" partners-list-item">
-            <a href="/" class=" partners-logo" target="_blank" rel="noopener noreferrer Nofollow">
-              <svg class=" partners" width="88" height="45">
+          <li class="partners-list-item">
+            <a href="/" class="partners-logo" target="_blank" rel="noopener noreferrer Nofollow">
+              <svg class="partners" width="88" height="45">
                 <use href="./images/SVG/sprite.svg#icon-logo-6"></use>
               </svg>
             </a>
@@ -380,63 +407,67 @@
   </main>
 
   <footer id="contacts" class="footer">
-    <div class="container ">
-      <ul class="address-list">
-        <a href="./index.html" class="logo-footer">Web<span class="">Studio</span></a>
+    <div class="container">
+      <div class="tablet-container">
+        <ul class="address-list">
+          <a href="./index.html" class="logo-footer">Web<span class="">Studio</span></a>
 
-        <li class="address-item">
-          <a class="address-link map"
-            href="https://www.google.com.ua/maps/place/%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80+%D0%9B%D0%B5%D1%81%D1%96+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D1%97%D0%B2,+02000"
-            target="_blank" rel="noopener noreferrer Nofollow">г. Киев, пр-т Леси Украинки, 26</a>
-        </li>
-        <li class="address-item">
-          <a class="address-link" href="mailto:info@example.com" target="_blank"
-            rel="noopener noreferrer Nofollow">info@example.com</a>
-        </li>
-        <li class="address-item">
-          <a class="address-link" href="tel:+38(099)111 11 11" target="_blank" rel="noopener noreferrer Nofollow">+38
-            099 111 11 11</a>
-        </li>
-      </ul>
+          <li class="address-item">
+            <a class="address-link map"
+              href="https://www.google.com.ua/maps/place/%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80+%D0%9B%D0%B5%D1%81%D1%96+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D1%97%D0%B2,+02000"
+              target="_blank" rel="noopener noreferrer Nofollow">г. Киев, пр-т Леси Украинки, 26</a>
+          </li>
+          <li class="address-item">
+            <a class="address-link" href="mailto:info@example.com" target="_blank"
+              rel="noopener noreferrer Nofollow">info@example.com</a>
+          </li>
+          <li class="address-item">
+            <a class="address-link" href="tel:+38(099)111 11 11" target="_blank" rel="noopener noreferrer Nofollow">+38
+              099 111 11 11</a>
+          </li>
+        </ul>
 
-      <!-- JOIN US присоединяйтесь -->
-      <div class="join-us-section">
-        <p class="join-us-title">Присоединяйтесь</p>
-        <!-- контейнер соц сетей-->
-        <div class="social-section-footer">
-          <ul class="social-list-footer">
-            <li class="social-item-footer">
-              <a class="social-link-footer" href="www.instagram.com" target="_blank" rel="noopener noreferrer Nofollow">
-                <svg class="social-icon-footer" width="20" height="20">
-                  <use href="./images/SVG/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item-footer">
-              <a class="social-link-footer" href="www.twitter.com" target="_blank" rel="noopener noreferrer Nofollow">
-                <svg class="social-icon-footer" width="20" height="20">
-                  <use href="./images/SVG/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item-footer">
-              <a class="social-link-footer" href="www.facebook.com" target="_blank" rel="noopener noreferrer Nofollow">
-                <svg class="social-icon-footer" width="20" height="20">
-                  <use href="./images/SVG/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item-footer">
-              <a class="social-link-footer" href="www.linkedin.com" target="_blank" rel="noopener noreferrer Nofollow">
-                <svg class="social-icon-footer" width="20" height="20">
-                  <use href="./images/SVG/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <!-- JOIN US присоединяйтесь -->
+        <div class="join-us-section">
+          <p class="join-us-title">Присоединяйтесь</p>
+          <!-- контейнер соц сетей-->
+          <div class="social-section-footer">
+            <ul class="social-list-footer">
+              <li class="social-item-footer">
+                <a class="social-link-footer" href="www.instagram.com" target="_blank"
+                  rel="noopener noreferrer Nofollow">
+                  <svg class="social-icon-footer" width="20" height="20">
+                    <use href="./images/SVG/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item-footer">
+                <a class="social-link-footer" href="www.twitter.com" target="_blank" rel="noopener noreferrer Nofollow">
+                  <svg class="social-icon-footer" width="20" height="20">
+                    <use href="./images/SVG/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item-footer">
+                <a class="social-link-footer" href="www.facebook.com" target="_blank"
+                  rel="noopener noreferrer Nofollow">
+                  <svg class="social-icon-footer" width="20" height="20">
+                    <use href="./images/SVG/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item-footer">
+                <a class="social-link-footer" href="www.linkedin.com" target="_blank"
+                  rel="noopener noreferrer Nofollow">
+                  <svg class="social-icon-footer" width="20" height="20">
+                    <use href="./images/SVG/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
       <!-- Подпишись на рассылку -->
       <div class="subscription">
         <strong class="join-us-title">Подпишитесь на рассылку</strong>

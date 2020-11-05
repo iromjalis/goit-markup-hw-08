@@ -1,0 +1,48 @@
+/* !=== WORK ===*/
+@media screen and (max-width: 1199px) {
+  .work-section {
+    display: none;
+  }
+}
+.work-section {
+  display: none;
+  padding-bottom: 94px;
+
+  @media screen and(min-width: 1200px) {
+    display: block;
+  }
+}
+.heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2em;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.work-list {
+  display: flex;
+
+  & .work-item + .work-item {
+    margin-left: 30px;
+  }
+}
+.work-item {
+  position: relative;
+}
+.work-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2em;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white-color;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
