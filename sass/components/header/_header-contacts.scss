@@ -1,0 +1,74 @@
+.contacts-list {
+  margin-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    margin-left: 84px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+    & .contacts-item + .contacts-item {
+      margin-left: 50px;
+    }
+  }
+}
+
+.contacts.link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  color: $text-color;
+
+  &:first-child {
+    margin-bottom: 16px;
+    @media screen and(min-width:768px) {
+      margin-bottom: 10px;
+    }
+    @media screen and(min-width: 1200px) {
+      margin-bottom: 0px;
+    }
+  }
+  &:hover,
+  &:focus {
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    color: $accent-color;
+  }
+  &:hover .contacts-svg,
+  &:focus .contacts-svg {
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    fill: $accent-color;
+  }
+  & .contacts-svg {
+    margin-right: 4px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 1230px) {
+    font-size: 14px;
+  }
+}
+
+.contacts-svg {
+  fill: $text-color;
+
+  margin-right: 3px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

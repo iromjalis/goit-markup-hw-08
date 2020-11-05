@@ -246,13 +246,6 @@ button:active, button:focus {
   border-radius: 4px;
 }
 
-.menu-item, .contacts-item {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
 .logo, .logo-footer {
   display: inline-block;
   font-family: "Raleway", sans-serif;
@@ -274,6 +267,11 @@ button:active, button:focus {
 
 .header {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 24px;
   margin-top: auto;
   margin-bottom: auto;
   border-bottom: 1px solid #ececec;
@@ -296,6 +294,110 @@ button:active, button:focus {
 
 .logo span {
   color: #212121;
+}
+
+.contacts-list {
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-list {
+    margin-top: 0;
+    margin-left: 84px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+  }
+  .contacts-list .contacts-item + .contacts-item {
+    margin-left: 50px;
+  }
+}
+
+.contacts.link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #757575;
+}
+
+.contacts.link:first-child {
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts.link:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts.link:first-child {
+    margin-bottom: 0px;
+  }
+}
+
+.contacts.link:hover, .contacts.link:focus {
+  -webkit-transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  color: #2196f3;
+}
+
+.contacts.link:hover .contacts-svg,
+.contacts.link:focus .contacts-svg {
+  -webkit-transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  fill: #2196f3;
+}
+
+.contacts.link .contacts-svg {
+  margin-right: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts.link .contacts-svg {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts.link {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1230px) {
+  .contacts.link {
+    font-size: 14px;
+  }
+}
+
+.contacts-svg {
+  fill: #757575;
+  margin-right: 3px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-svg {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -342,120 +444,123 @@ button:active, button:focus {
   fill: #2196f3;
 }
 
-@media screen and (max-width: 767px) {
-  /*Навигация по сайту в бургере*/
-  .menu-container {
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.menu-button {
+  margin-left: auto;
+  background-color: inherit;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-menu {
+  display: block;
+}
+
+.menu-button.is-open .icon-cross {
+  display: none;
+}
+
+.menu-button:focus .menu-button,
+.menu-button:hover .menu-button {
+  fill: #2196f3;
+  -webkit-transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
     display: none;
-    width: 100%;
-    min-height: 393px;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    top: 100%;
-    left: 0;
-    text-align: center;
-    background-color: #fff;
-    border: 1px solid #ececec;
   }
-  .menu-container.is-open {
-    display: block;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 101%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  z-index: 50;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+.menu-container.is-open {
+  display: block;
+}
+
+.menu-container .menu-item + .menu-item {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container .menu-item + .menu-item {
+    margin-top: 0;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .contacts-list {
-    margin-left: 84px;
-  }
-  .header .container {
-    width: 768px;
-    text-align: left;
-  }
   .menu-container {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    margin-left: 88px;
-  }
-  .menu-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .menu-item:not(:last-child) {
-    margin-right: 50px;
-  }
-  .contacts-list {
-    font-size: 12px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
-  }
-  .contacts-svg {
-    margin-right: 8px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .contacts-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .contacts-item:not(:last-child) {
-    margin-right: 50px;
-  }
-}
-
-.menu-item {
+.link {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
   color: #212121;
 }
 
-.menu-item.current {
+@media screen and (min-width: 768px) {
+  .link {
+    font-size: 14px;
+  }
+}
+
+.link:hover, .link:focus {
+  color: #2196f3;
+  -webkit-transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+}
+
+.link.current {
   color: #2196f3;
 }
 
-@media screen and (max-width: 767px) {
-  .menu-item:nth-child(1) {
-    margin-bottom: 52px;
-  }
-  .menu-item:nth-child(2) {
-    margin-bottom: 40px;
-  }
-  .menu-item:nth-child(3) {
-    margin-bottom: 60px;
-  }
-}
-
-.contacts-item .contacts.link {
-  color: #757575;
-}
-
-.contacts-item .contacts.link:hover, .contacts-item .contacts.link:focus,
-.contacts-item .contacts.link:hover .contacts-svg,
-.contacts-item .contacts.link:focus .contacts-svg {
-  color: #2196f3;
-  fill: #2196f3;
-}
-
-@media screen and (max-width: 767px) {
-  .contacts-item:first-child {
-    margin-bottom: 16px;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .contacts-item:first-child {
-    margin-bottom: 10px;
-  }
-}
-
-.current {
+.link.current {
   display: inline-block;
   position: relative;
 }
 
-.current::after {
+.link.current::after {
   position: absolute;
   display: block;
   content: '';
@@ -467,19 +572,40 @@ button:active, button:focus {
   margin-top: 8px;
 }
 
-.contacts {
-  /*     &.link {
-        margin-left: 10px;
-    } */
+@media screen and (min-width: 768px) {
+  .link.current::after {
+    margin-top: 42px;
+  }
 }
 
-.contacts-svg {
-  fill: #757575;
-  vertical-align: baseline;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 10px;
+.link.current:hover::after {
+  width: 100%;
+}
+
+.menu-list {
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0;
+    margin-left: 88px;
+  }
+  .menu-list .menu-item + .menu-item {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-list {
+    margin-left: 93px;
+  }
 }
 
 .backdrop {
