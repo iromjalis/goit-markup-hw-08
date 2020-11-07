@@ -1,53 +1,62 @@
-.partners {
-  fill: #afb1b8;
+.partners-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-  &-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  &-list-item {
-    width: 210px;
-    height: 90px;
-    margin: 15px;
-    border: 1px solid #afb1b8;
-    box-sizing: border-box;
-    border-radius: 4px;
+  .heading {
     text-align: center;
-    padding-top: 20px;
-    &:hover,
-    &:focus,
-    &:hover .partners,
-    &:focus .partners {
-      border-color: $accent-color;
-      fill: $accent-color;
-    }
+    margin-bottom: 50px;
   }
-
-  &-list {
-    margin: -15px;
+  .partners-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
   }
 }
-
 .partners-list-item {
-  /*   display: inline-flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 30px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  @media screen and (min-width: 768px) {
+  width: calc((100% - 30px) / 2);
+  height: 90px;
+  margin-bottom: 30px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  @extend %transition;
+
+  &:nth-child(odd) {
+    margin-right: 30px;
+  }
+
+  &:hover {
+    border-color: $accent-color;
+  }
+
+  &:hover .partners {
+    fill: $accent-color;
+  }
+
+  @media screen and(min-width: 768px) {
     width: calc((100% - 60px) / 3);
-    &:nth-child(odd) {
-      margin-right: 30px;
+    margin-right: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0px;
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and(min-width: 1230px) {
     width: calc((100% - 150px) / 6);
+
     &:not(:last-child) {
       margin-right: 30px;
     }
   }
+}
+.partners-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.partners {
+  fill: #afb1b8;
 }
