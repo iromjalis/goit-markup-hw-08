@@ -202,7 +202,7 @@ button:active, button:focus {
   border: none;
 }
 
-.button, .hero-section .button, footer .hero-btn {
+.submit-button, .hero-section .button, footer .hero-btn {
   display: inline-block;
   letter-spacing: 0.06em;
   font-weight: 700;
@@ -211,15 +211,13 @@ button:active, button:focus {
   text-align: center;
   color: #fff;
   background-color: #2196f3;
-  /*     min-width: 200px;
- */
   padding: 10px 32px;
   border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.button:hover, footer .hero-btn:hover {
+.submit-button:hover, .hero-section .button:hover, footer .hero-btn:hover {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -256,7 +254,7 @@ button:active, button:focus {
   letter-spacing: 0.03em;
 }
 
-.backdrop, .form-input, .social-link, .partners-list-item, .social-link-footer, footer .hero-btn, .card-container .card-element, .card-img, .card-img .overlay {
+.backdrop, .form-input, .submit-button, .social-link, .partners-list-item, .social-link-footer, footer .hero-btn, .card-container .card-element, .card-img, .card-img .overlay {
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-property: all;
@@ -917,13 +915,19 @@ textarea:focus {
   margin-top: 30px;
 }
 
-.button {
+.submit-button {
   min-width: 200px;
   min-height: 50px;
   display: inline-block;
   padding: 10px 32px;
-  border: 1px solid transparent;
+  background: #2196f3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+
+.submit-button:hover, .submit-button:focus {
+  color: #212121;
 }
 
 /* === END CHECKBOX ===*/
@@ -1361,12 +1365,12 @@ textarea:focus {
   background-color: #2f303a;
 }
 
-.footer.container {
+.footer .container {
   text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-  .footer.container {
+  .footer .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1407,6 +1411,12 @@ textarea:focus {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .tablet-container {
+    text-align: left;
+  }
+}
+
 .address-link {
   display: inline-block;
   font-size: 14px;
@@ -1436,8 +1446,14 @@ textarea:focus {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .join-us-section {
+    text-align: left;
+  }
+}
+
 .join-us-title {
-  min-width: 145px;
+  width: 206px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -1447,11 +1463,14 @@ textarea:focus {
   margin: 0 auto;
   margin-top: 0px;
   margin-bottom: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .social-section-footer {
   width: 206px;
-  height: 44px;
+  max-height: 44px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1512,6 +1531,13 @@ strong {
   margin-top: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .subscription {
+    margin-top: 15px;
+    text-align: left;
+  }
+}
+
 .subscription .colortext {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1528,6 +1554,29 @@ strong {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .subscription .colortext {
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+}
+
+.subscription-title {
+  min-width: 206px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 footer .hero-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1537,6 +1586,18 @@ footer .hero-btn {
 
 footer .hero-btn img {
   margin-left: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription-form {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: 0;
+  }
+  .colortext {
+    margin-bottom: 0;
+  }
 }
 
 /* === BUTTON === */

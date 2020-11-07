@@ -11,6 +11,11 @@ strong {
   color: $white-color;
   margin-top: 60px;
 
+  @media screen and (min-width: 1200px) {
+    margin-top: 15px;
+    text-align: left;
+  }
+
   & .colortext {
     display: inline-flex;
     width: 450px;
@@ -22,6 +27,24 @@ strong {
     background-color: $hero-bg;
     padding-left: 16px;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+      margin-right: 12px;
+    }
+  }
+  &-title {
+    min-width: 206px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $white-color;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    justify-content: center;
   }
 }
 
@@ -33,5 +56,15 @@ footer .hero-btn {
 
   & img {
     margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription-form {
+    display: inline-flex;
+    margin: 0;
+  }
+  .colortext {
+    margin-bottom: 0;
   }
 }
