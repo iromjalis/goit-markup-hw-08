@@ -254,7 +254,7 @@ button:active, button:focus {
   letter-spacing: 0.03em;
 }
 
-.backdrop, .form-input, .submit-button, .social-link, .partners-list-item, .social-link-footer, footer .hero-btn, .card-container .card-element, .card-img, .card-img .overlay {
+.backdrop, .form-input, .submit-button, .social-link, .partners-list-item, .social-link-footer, footer .hero-btn, .portfolio-main .card-container .card-element, .card-img, .card-img .overlay {
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-property: all;
@@ -1612,7 +1612,7 @@ footer .hero-btn img {
 
 /* === BUTTON === */
 .portfolio-main .container {
-  margin: 0 auto;
+  text-align: center;
 }
 
 .portfolio-main .container .btn-list {
@@ -1622,7 +1622,7 @@ footer .hero-btn img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: -15px;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1633,6 +1633,19 @@ footer .hero-btn img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-main .container .btn-list {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
   }
 }
 
@@ -1662,7 +1675,13 @@ footer .hero-btn img {
   padding-bottom: 60px;
 }
 
-.card-container {
+@media screen and (min-width: 1200px) {
+  .portfolio-main {
+    padding-bottom: 64px;
+  }
+}
+
+.portfolio-main .card-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1670,7 +1689,31 @@ footer .hero-btn img {
       flex-wrap: wrap;
 }
 
-.card-container .card-element {
+@media screen and (min-width: 768px) {
+  .portfolio-main .card-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-main .card-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 0px;
+  }
+}
+
+.portfolio-main .card-container .card-element {
   overflow: hidden;
   width: 100%;
   margin-bottom: 30px;
@@ -1680,25 +1723,47 @@ footer .hero-btn img {
           box-sizing: border-box;
 }
 
-.card-container .card-element:hover, .card-container .card-element:focus {
+.portfolio-main .card-container .card-element:nth-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-main .card-container .card-element {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+  }
+  .portfolio-main .card-container .card-element:nth-child(2n + 2) {
+    margin-right: 0;
+  }
+  .portfolio-main .card-container .card-element:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-main .card-container .card-element {
+    width: calc((100% - 60px) / 3);
+    margin-right: 0;
+  }
+  .portfolio-main .card-container .card-element:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  .portfolio-main .card-container .card-element:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+.portfolio-main .card-container .card-element:hover, .portfolio-main .card-container .card-element:focus {
   cursor: pointer;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.card-container .card-element:hover .overlay,
-.card-container .card-element:focus .overlay {
+.portfolio-main .card-container .card-element:hover .overlay,
+.portfolio-main .card-container .card-element:focus .overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   overflow: hidden;
-}
-
-.card-container .card-element:nth-child(3n) {
-  margin-right: 0px;
-}
-
-.card-container .card-element:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
 }
 
 .card-img {
