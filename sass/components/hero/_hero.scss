@@ -6,6 +6,25 @@
     padding-bottom: 118px;
     text-align: center;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero.jpg);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/hero/hero-bg-mobile_x2.jpg);
+    }
+  
+    @media screen and (min-width: 489px) {
+      background-image: url(../img/hero/hero-bg-tablet.jpg);
+  
+      @media (min-resolution: 2dppx) {
+        background-image: url(../img/hero/hero-bg-tablet_x2.jpg);
+      }
+    }
+    @media screen and (min-width: 769px) {
+      background-image: url(../img/hero/hero-bg-desk.jpg);
+  
+      @media (min-resolution: 2dppx) {
+        background-image: url(../img/hero/hero-bg-desk_x2.jpg);
+      }
+
     .button {
       min-width: 200px;
       min-height: 50px;
