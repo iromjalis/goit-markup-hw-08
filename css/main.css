@@ -1362,19 +1362,36 @@ textarea:focus {
 }
 
 .footer.container {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-  .tablet-container {
+  .footer.container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper:not(:last-child) {
+    width: calc((100% - 30px) / 2);
+  }
+  .wrapper:last-child {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1230px) {
+  .wrapper:not(:last-child) {
+    width: calc((50% - 45px) / 2);
+  }
+  .wrapper:last-child {
+    width: 50%;
+    margin-right: 0;
+    margin-left: auto;
   }
 }
 
