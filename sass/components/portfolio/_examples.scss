@@ -30,9 +30,16 @@
       border: 1px solid #eeeeee;
       box-sizing: border-box;
 
-      &:nth-child(-n + 3) {
+      &:first-child {
+        margin-bottom: 66px;
+      }
+      &:last-child {
         margin-bottom: 0;
       }
+      @media screen and (min-width: 480px) {
+        margin-bottom: 30px;
+      }
+
       @media screen and (min-width: 768px) {
         width: calc((100% - 30px) / 2);
         margin-right: 30px;
@@ -51,6 +58,9 @@
         &:not(:nth-child(3n)) {
           margin-right: 30px;
         }
+        &:first-child {
+          margin-bottom: 30px;
+        }
 
         &:last-child {
           margin-bottom: 30px;
@@ -59,8 +69,7 @@
       &:hover,
       &:focus {
         cursor: pointer;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-          0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
       }
 
       &:hover .overlay,
@@ -77,6 +86,15 @@
   position: relative;
   overflow: hidden;
   @extend %transition;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 294px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+    height: 294px;
+  }
 
   .overlay {
     position: absolute;
@@ -99,6 +117,7 @@
   }
   img {
     width: 100%;
+    height: 100%;
   }
 }
 
@@ -119,6 +138,8 @@
       padding-top: 20px;
       padding-bottom: 4px;
       padding-left: 24px;
+      padding-right: 24px;
+      text-align: left;
       margin: 0px auto;
     }
     &-description {
@@ -127,6 +148,8 @@
       letter-spacing: 0.03em;
       color: $text-color;
       padding-left: 24px;
+      padding-right: 24px;
+      text-align: left;
     }
   }
 }
