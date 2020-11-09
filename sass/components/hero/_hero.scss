@@ -5,29 +5,19 @@
     padding-top: 118px;
     padding-bottom: 118px;
     text-align: center;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url("../images/hero/Hero_480_400.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../images/hero/Hero_480_400_2x.jpg");
-    }
-
-    @media screen and (max-width: 479px) {
-      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url("../images/hero/Hero_480_400.jpg");
-    }
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../images/hero/Hero_480_400_2x.jpg");
+      background-image: url("../images/hero/hero_bg_2x.jpg");
     }
 
     @media screen and (min-width: 480px) {
-      background-image: url("../images/hero/Hero_768.jpg");
+      background-image: url("../images/hero/hero_768.jpg");
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../images/hero/Hero_768_2x.jpg");
+        background-image: url("../images/hero/hero_768_2x.jpg");
       }
     }
     @media screen and (min-width: 769px) {
