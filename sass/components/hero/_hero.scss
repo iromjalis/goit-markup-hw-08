@@ -5,28 +5,25 @@
     padding-top: 118px;
     padding-bottom: 118px;
     text-align: center;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/hero/hero.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/Hero_480_400@.jpg);
 
     @media (min-resolution: 2dppx) {
-      background-image: url(../img/hero/hero-bg-mobile_x2.jpg);
+      background-image: url(../img/hero/Hero_480_400_2x.jpg);
     }
 
     @media screen and (min-width: 489px) {
-      background-image: url(../img/hero/hero-bg-tablet.jpg);
+      background-image: url(../img/hero/Hero_768.jpg);
 
       @media (min-resolution: 2dppx) {
-        background-image: url(../img/hero/hero-bg-tablet_x2.jpg);
+        background-image: url(../img/hero/Hero_768_2x.jpg);
       }
     }
     @media screen and (min-width: 769px) {
-      background-image: url(../img/hero/hero-bg-desk.jpg);
+      background-image: url(../img/hero/Hero_1200.jpg);
 
       @media (min-resolution: 2dppx) {
-        background-image: url(../img/hero/hero-bg-desk_x2.jpg);
+        background-image: url(../img/hero/hero_1200_2x.jpg);
       }
     }
     .button {
